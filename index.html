@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page MANACO</title>
+    <style>
+        /* Estilos para foco visible */
+        a:focus, button:focus {
+            outline: 2px solid blue;
+            outline-offset: 2px;
+        }
+
+        /* Skip link: solo visible al recibir foco */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
     <header>
         <h1>MANACO</h1>
         <nav>
@@ -17,27 +43,45 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <!-- Sección de inicio -->
         <section id="inicio">
             <p>Calzado que impulza tu paso</p>
         </section>
 
-        <section id="producto1">
-            <h2>producto 1</h2>
-            <p>00,00</p>
-            <button type="submit">Comprar</button>
+        <!-- Sección de productos -->
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+
+            <!-- Producto 1 -->
+            <article>
+                <h3>producto 1</h3>
+                <p>00,00</p>
+                <button type="button">Comprar</button>
+                <!-- Si tuvieras imagen: <img src="producto1.jpg" alt="Descripción del producto 1"> -->
+            </article>
+
+            <!-- Producto 2 -->
+            <article>
+                <h3>producto 2</h3>
+                <p>00,00</p>
+                <button type="button">Comprar</button>
+                <!-- Si tuvieras imagen: <img src="producto2.jpg" alt="Descripción del producto 2"> -->
+            </article>
+
+            <!-- Producto 3 -->
+            <article>
+                <h3>producto 3</h3>
+                <p>00,00</p>
+                <button type="button">Comprar</button>
+                <!-- Si tuvieras imagen: <img src="producto3.jpg" alt="Descripción del producto 3"> -->
+            </article>
         </section>
 
-        <section id="producto2">
-            <h2>producto 2</h2>
-            <p>00,00</p>
-            <button type="submit">Comprar</button>
-        </section>
-
-        <section id="producto3">
-            <h2>producto 3</h2>
-            <p>00,00</p>
-            <button type="submit">Comprar</button>
+        <!-- Sección de contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Escribe a contacto@manaco.com</p>
         </section>
     </main>
 
