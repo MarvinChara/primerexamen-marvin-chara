@@ -12,18 +12,46 @@
     <meta property="og:image" content="https://via.placeholder.com/150">
 
     <style>
-        /* Estilos para foco visible */
-        a:focus, button:focus {
-            outline: 2px solid blue;
-            outline-offset: 2px;
+        /* Estilos generales (mobile-first) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Skip link: solo visible al recibir foco */
+        /* Header mobile */
+        header {
+            background-color: rgb(170, 160, 160);
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(214, 214, 214);
+            color: blue; /* Footer texto azul */
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Skip link */
         .skip-link {
             position: absolute;
             top: -40px;
             left: 0;
-            background: #000;
+            background: #c0c0c0;
             color: #fff;
             padding: 8px;
             z-index: 100;
@@ -32,6 +60,52 @@
 
         .skip-link:focus {
             top: 0;
+        }
+
+        /* Foco visible */
+        a:focus, button:focus {
+            outline: 2px solid blue;
+            outline-offset: 2px;
+        }
+
+        /* Banner oculto en móvil */
+        #inicio {
+            display: none;
+        }
+
+        /* Productos en formato tarjeta */
+        #productos article {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        /* Media query para pantallas más grandes */
+        @media (min-width: 600px) {
+            #productos article {
+                width: 30%;
+                margin: 10px;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            nav ul {
+                justify-content: flex-start;
+                gap: 20px;
+            }
+
+            #inicio {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -62,7 +136,7 @@
                 <h3>producto 1</h3>
                 <p>00,00</p>
                 <button type="button">Comprar</button>
-                <!-- Si tuvieras imagen real, usarías alt descriptivo; actualmente solo texto -->
+                <!-- Imagen no permitida; solo texto -->
             </article>
 
             <article>
@@ -85,7 +159,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 MANACO. Todos los derechos reservados.</p>
+        <p>Copyring 2025 MANACO</p>
     </footer>
 </body>
 </html>
